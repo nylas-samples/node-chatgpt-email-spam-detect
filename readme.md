@@ -1,4 +1,4 @@
-# node-email-send
+# node-email-read
 
 This sample will show you to easily read your email with the Nylas Node.js SDK.
 
