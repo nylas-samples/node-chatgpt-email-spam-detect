@@ -1,6 +1,6 @@
 # node-email-send
 
-This sample will show you to easily send an email with the Nylas Node.js SDK.
+This sample will show you to easily read your email with the Nylas Node.js SDK.
 
 ## Setup
 
@@ -39,10 +39,11 @@ Run the script using the `node` command:
 $ node index.js
 ```
 
-When your message is successfully sent, you'll get the following output in your terminal:
+When your message is successfully sent, you'll get the following output in your terminal for a few emails:
 
 ```text
-Message "With Love, from Nylas" was sent with ID 111111111111111111
+[4/7/YYYY] Here's an email subject
+[4/6/YYYY] Another subject
 ```
 
 ## Learn more
