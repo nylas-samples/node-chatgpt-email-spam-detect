@@ -39,7 +39,7 @@ Run the script using the `node` command:
 $ node index.js
 ```
 
-When your message is successfully sent, you'll get the following output in your terminal for a few emails:
+When your messages are successfully read, you'll get the following output in your terminal for a few emails:
 
 ```text
 [4/7/YYYY] Here's an email subject
