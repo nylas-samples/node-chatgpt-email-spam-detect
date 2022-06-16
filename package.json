@@ -2,6 +2,6 @@
   "type": "module",
   "dependencies": {
     "dotenv": "^16.0.0",
-    "nylas": "^6.2.2"
+    "nylas": "^6.4.2"
   }
 }
