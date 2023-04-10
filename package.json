@@ -1,7 +1,11 @@
 {
+  "scripts": {
+    "start": "node index.js"
+  },
   "type": "module",
   "dependencies": {
     "dotenv": "^16.0.0",
-    "nylas": "^6.4.2"
+    "nylas": "^6.4.2",
+    "openai": "^3.2.1"
   }
 }
