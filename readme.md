@@ -1,4 +1,4 @@
-# node-email-read
+# node-chatgpt-email-spam-detect
 
 This sample will show you to easily use the Nylas Node.js SDK and the OpenAI Node.js SDK to categorize your email messages.
 
