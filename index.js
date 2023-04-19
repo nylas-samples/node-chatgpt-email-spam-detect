@@ -19,10 +19,9 @@ const openai = new OpenAIApi(configuration);
 // Get messages from Nylas
 const getMessageList = async () => {
   try {
-    const messages = await nylas.messages;
-    const messageList = await messages.list({ limit: 10 });
+    const messageList = await nylas.messages.list({ limit: 10 });
 
-    console.log(messageList.length);
+    console.log(`Found ${messageList.length} messages in your inbox...`);
 
     return messageList;
   } catch (err) {
@@ -36,14 +35,15 @@ const classifyMessages = async (messageList) => {
     messageList.map(async (message) => {
       const { id, date, subject } = message;
       const formattedDate = new Date(date).toLocaleDateString();
-      const isSpam = await classifyMessage(message);
+      const messageLabel = await classifyMessage(message);
 
-      return { id, formattedDate, subject, isSpam };
+      return { id, formattedDate, subject, messageLabel };
     })
   );
 };
 
-// Pass a message to GPT and get a string value for whether it should be read and why
+// Pass a message to GPT
+// Get a string value for whether the user should read and why
 const classifyMessage = async ({ from, subject, snippet }) => {
   const response = await openai.createChatCompletion({
     model: "gpt-3.5-turbo",
@@ -69,6 +69,6 @@ const messageList = await getMessageList();
 const classifiedMessages = await classifyMessages(messageList);
 
 // Log the results
-classifiedMessages.forEach(({ formattedDate, subject, isSpam, id }) =>
-  console.log(`[${formattedDate}] ${subject} - ${isSpam} (${id})`)
+classifiedMessages.forEach(({ formattedDate, subject, messageLabel, id }) =>
+  console.log(`[${formattedDate}] ${subject} - ${messageLabel} (${id})`)
 );
