@@ -10,14 +10,14 @@ This sample will show you to easily use the Nylas Node.js SDK and the OpenAI Nod
 
 ### Gather environment variables
 
-You'll need the following values:
+You'll need the following values (visit the Nylas dashboard at dashboard.nylas.com):
 
 ```text
-ACCESS_TOKEN = ""
-CLIENT_ID = ""
-CLIENT_SECRET = ""
-RECIPIENT_ADDRESS = ""
-OPENAI_API_KEY = ""
+CLIENT_ID = "" # You can get this from the Nylas dashboard
+CLIENT_SECRET = "" #  You can get this from the Nylas dashboard
+ACCESS_TOKEN = "" # You can get this by authing a user account (e.g. via the Nylas dashboard)
+RECIPIENT_ADDRESS = "" # The auth user account's email address
+OPENAI_API_KEY = "" # You can get this from the OpenAI dashboard
 ```
 
 Add the above values to a new `.env` file:
@@ -54,3 +54,11 @@ The core of this example is the "category" in the output above. This is the cate
 ## Learn more
 
 Visit our [Nylas Node.js SDK documentation](https://developer.nylas.com/docs/developer-tools/sdk/node-sdk/) to learn more.
+
+## Expand on this example
+
+- Give the prompt the option to be "unsure"
+- Let the user "train" the prompt by storing an allow/block list to add to the prompt
+- Expose the results in a graphical email client
+- Use the results to categorize emails in Gmail/Outlook/Exchange
+- Expand on the list of categories to triage

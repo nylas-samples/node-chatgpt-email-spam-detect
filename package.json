@@ -4,6 +4,7 @@
   },
   "type": "module",
   "dependencies": {
+    "chalk": "^5.2.0",
     "dotenv": "^16.0.0",
     "nylas": "^6.4.2",
     "openai": "^3.2.1"
